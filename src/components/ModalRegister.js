@@ -34,7 +34,7 @@ const ModalRegister = ({ agregarEstudiante }) => {
                                 </div>
                                 <div class="mb-3">
                                     <label for="recipient-name" class="col-form-label">edad :</label>
-                                    <input type="number" class="form-control" id="recipient-name"onChange={(e)=>setForm({...form,edad:e.target.value})} value={form.edad} />
+                                    <input type="number" class="form-control" id="recipient-name" onChange={(e)=>setForm({...form,edad:e.target.value})} value={form.edad} />
                                 </div>
                                 <div class="mb-3">
                                     <label for="recipient-name" class="col-form-label">Nota :</label>
