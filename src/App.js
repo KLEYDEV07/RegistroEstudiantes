@@ -1,25 +1,27 @@
-
-import './App.css';
+import { useState } from "react";
+import ModalRegister from "./components/ModalRegister";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+  const [reportes, setReportes] = useState([]);
+  const agregarEstudiante = (estudiante) => {
 
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    reportes.push( estudiante );
+    setReportes([...reportes]);
+}
+console.log(reportes);
+return (
+  <div className="container">
+    <ModalRegister agregarEstudiante={agregarEstudiante} />
+    {
+      reportes.map((r,i)=>(
+        <h1 key={i}>{r.nombre}</h1>
+      ))
+    }
+  </div>
+);
+
 }
 
 export default App;
+
