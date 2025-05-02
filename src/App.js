@@ -9,7 +9,6 @@ function App() {
     reportes.push( estudiante );
     setReportes([...reportes]);
 }
-console.log(reportes);
 return (
   <div className="container">
     <ModalRegister agregarEstudiante={agregarEstudiante} />
