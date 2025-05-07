@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ModalRegister from "./components/ModalRegister";
+import ListStudents from "./components/ListStudents";
 
 function App() {
   const [reportes, setReportes] = useState([]);
@@ -12,11 +13,7 @@ function App() {
 return (
   <div className="container">
     <ModalRegister agregarEstudiante={agregarEstudiante} />
-    {
-      reportes.map((r,i)=>(
-        <h1 key={i}>{r.nombre}</h1>
-      ))
-    }
+    <ListStudents reportes={reportes} />
   </div>
 );
 
